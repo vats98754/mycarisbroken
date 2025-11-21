@@ -1,0 +1,3 @@
+# Requirements for Mac Client (Optional - if not using web browser)
+python-socketio[client]>=5.10.0
+matplotlib>=3.7.0
