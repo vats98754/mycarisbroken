@@ -116,6 +116,25 @@ echo ""
 echo "✅ Python packages installed"
 echo ""
 
+# Setup WiFi Auto-Connect
+echo "════════════════════════════════════════════════════════════"
+echo "Step 6.5: Setup WiFi Auto-Connect to Phone Hotspot (Optional)"
+echo "════════════════════════════════════════════════════════════"
+echo ""
+
+read -p "Would you like to setup auto-connect to your phone's hotspot? (y/n): " -n 1 -r
+echo ""
+
+if [[ $REPLY =~ ^[Yy]$ ]]; then
+    echo ""
+    chmod +x setup_wifi.sh
+    ./setup_wifi.sh
+else
+    echo "⏭  Skipping WiFi setup. You can run 'chmod +x setup_wifi.sh && ./setup_wifi.sh' later."
+fi
+
+echo ""
+
 # Setup permissions for serial port
 echo "════════════════════════════════════════════════════════════"
 echo "Step 7: Setting Up Serial Port Permissions"
